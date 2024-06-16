@@ -1,4 +1,4 @@
-# Copyright 2024 leep-frog
+# Copyright 2022 splitkb.com <support@splitkb.com>
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -13,6 +13,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-# --------------------------------------------------------------------------------
-# Keep this file, even if it is empty, as a marker that this folder contains tests
-# --------------------------------------------------------------------------------
+# Although no rules are defined,
+# presence of this file is required for QMK to compile it.
+CONVERT_TO=liatris
+
