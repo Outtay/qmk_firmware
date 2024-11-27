@@ -1,16 +1,25 @@
 # My own notes
 
 I have a docker container (docker ps -l) that can build my keymap
+readme and dockerfile can be found in the "docker" folder
 In there I just set the defaults according to https://docs.qmk.fm/#/newbs_building_firmware
 I also had to set the git safe directory to all with git config --global --add safe.directory '*'
 
 I can generate the .c file from the json by doing 
 qmk json2c -o keymap.c keymap.json
 
-the json I get from the qmk configurator
+I get the json from the qmk configurator
+
+After that I add the prependumCode and the addendumCode file to the keymap.c
+
+sed -i '1r prependumCode' keymap.c && cat addendumCode >> keymap.c
 
 in the rules.mk there's the convert rule such that I don't need to mention that otherwise to compile I have to call
 _qmk compile -kb splitkb/aurora/lily58/rev1 -km outtay_
+
+
+To do everything in one line while being in the outtay folder
+qmk json2c -o keymap.c ../splitkb_aurora_lily58_rev1_outtay.json && sed -i '1r prependumCode' keymap.c && cat addendumCode >> keymap.c && cd /qmk_firmware && qmk compile -kb splitkb/aurora/lily58/rev1 -km outtay && cd lilyConfig/keymaps/outtay
 
 
 

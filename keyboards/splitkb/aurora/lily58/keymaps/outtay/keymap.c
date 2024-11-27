@@ -1,4 +1,9 @@
 #include QMK_KEYBOARD_H
+enum my_keycodes {
+  OTTI_CIRC = SAFE_RANGE,
+  OTTI_BACK
+};
+
 
 
 /* THIS FILE WAS GENERATED!
@@ -9,10 +14,13 @@
 
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-	[0] = LAYOUT(KC_ESC, KC_1, KC_2, KC_3, KC_4, KC_5, KC_6, KC_7, KC_8, KC_9, KC_0, KC_BSPC, KC_TAB, KC_X, KC_V, KC_L, KC_C, KC_W, KC_K, KC_H, KC_G, KC_F, KC_Q, KC_MINS, MO(2), KC_U, KC_I, KC_A, KC_E, KC_O, KC_S, KC_N, KC_R, KC_T, KC_D, LT(2,KC_Z), MO(1), KC_Z, KC_SCLN, KC_QUOT, KC_P, KC_Y, KC_Z, KC_MUTE, KC_B, KC_M, KC_COMM, KC_DOT, KC_J, MO(1), KC_LCTL, KC_LGUI, MO(1), KC_SPC, KC_ENT, MO(2), KC_BSPC, MO(3)),
-	[1] = LAYOUT(KC_GRV, KC_TILD, KC_EQL, KC_HASH, KC_EQL, LSFT(KC_EQL), KC_DLR, KC_NO, KC_TRNS, KC_TRNS, KC_TRNS, RSFT(KC_BSPC), KC_F1, LSFT(KC_X), LSFT(KC_V), LSFT(KC_L), LSFT(KC_C), LSFT(KC_W), RSFT(KC_K), RSFT(KC_H), RSFT(KC_G), RSFT(KC_F), RSFT(KC_Q), KC_RGUI, KC_TRNS, LSFT(KC_U), LSFT(KC_I), LSFT(KC_A), LSFT(KC_E), LSFT(KC_O), RSFT(KC_S), RSFT(KC_N), RSFT(KC_R), RSFT(KC_T), RSFT(KC_D), RSFT(KC_Z), KC_TRNS, LSFT(KC_LBRC), LSFT(KC_SCLN), LSFT(KC_QUOT), LSFT(KC_P), LSFT(KC_Y), KC_TRNS, KC_TRNS, RSFT(KC_B), RSFT(KC_M), RSFT(KC_COMM), RSFT(KC_DOT), RSFT(KC_J), KC_TRNS, KC_LCTL, KC_LSFT, KC_TRNS, KC_TRNS, RSFT(KC_ENT), MO(3), KC_TRNS, KC_TRNS),
-	[2] = LAYOUT(KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_GRV, KC_1, KC_QUES, RALT(KC_8), RALT(KC_9), KC_GRV, KC_EXLM, KC_NUBS, RSFT(KC_0), RSFT(KC_6), KC_NO, KC_TRNS, KC_TRNS, RALT(KC_MINS), KC_AMPR, RALT(KC_7), RALT(KC_0), KC_PAST, KC_UNDS, KC_ASTR, KC_LPRN, KC_SLSH, KC_GT, RALT(KC_Q), KC_NO, KC_NUHS, KC_DLR, RALT(KC_NUBS), RALT(KC_RBRC), KC_EQL, KC_TRNS, KC_TRNS, KC_PPLS, RSFT(KC_5), KC_AT, KC_PIPE, KC_LT, KC_NO, KC_TRNS, KC_TRNS, MO(3), KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS),
-	[3] = LAYOUT(KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, KC_F6, KC_F7, KC_F8, KC_F9, KC_F10, KC_F11, KC_F12, KC_NO, KC_PGUP, KC_BSPC, KC_UP, KC_DEL, KC_PGDN, KC_NO, KC_NO, KC_P7, KC_P8, KC_P9, KC_NO, KC_NO, KC_HOME, KC_LEFT, KC_DOWN, KC_RGHT, KC_END, KC_NO, KC_NO, KC_P4, KC_P5, KC_P6, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_P1, KC_P2, KC_P3, KC_LCTL, KC_TRNS, KC_TRNS, KC_TRNS, KC_P0, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS)
+	[0] = LAYOUT(KC_ESC, KC_1, KC_2, KC_3, KC_4, KC_5, KC_6, KC_7, KC_8, KC_9, KC_0, KC_BSPC, KC_TAB, KC_X, KC_V, KC_L, KC_C, KC_W, KC_K, KC_H, KC_G, KC_F, KC_Q, KC_MINS, MO(1), KC_U, KC_I, KC_A, KC_E, KC_O, KC_S, KC_N, KC_R, KC_T, KC_D, LT(1,KC_Z), KC_LSFT, KC_LBRC, KC_SCLN, KC_QUOT, KC_P, KC_Y, MO(5), KC_MUTE, KC_B, KC_M, KC_COMM, KC_DOT, KC_J, KC_RSFT, KC_LGUI, KC_LALT, KC_LCTL, KC_SPC, KC_ENT, KC_RCTL, TT(4), MO(2)),
+	[1] = LAYOUT(KC_TRNS, KC_BSLS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_1, KC_QUES, RALT(KC_8), RALT(KC_9), OTTI_CIRC, KC_EXLM, KC_NUBS, RSFT(KC_NUBS), RSFT(KC_0), RSFT(KC_6), KC_TRNS, KC_TRNS, RALT(KC_MINS), KC_AMPR, RALT(KC_7), RALT(KC_0), KC_PAST, KC_UNDS, KC_ASTR, KC_LPRN, KC_SLSH, KC_GT, RALT(KC_Q), KC_TRNS, KC_NUHS, KC_DLR, RALT(KC_NUBS), RALT(KC_RBRC), OTTI_BACK, KC_TRNS, KC_TRNS, KC_PPLS, RSFT(KC_5), KC_AT, KC_PIPE, KC_LT, KC_TRNS, KC_TRNS, KC_TRNS, KC_NO, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS),
+	[2] = LAYOUT(KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, KC_F6, KC_F7, KC_F8, KC_F9, KC_F10, KC_F11, KC_F12, KC_NO, KC_PGUP, KC_BSPC, KC_UP, KC_DEL, KC_PGDN, KC_NO, KC_7, KC_8, KC_9, KC_NO, KC_NO, KC_NO, KC_HOME, KC_LEFT, KC_DOWN, KC_RGHT, KC_END, KC_NO, KC_4, KC_5, KC_6, KC_NO, KC_NO, KC_TRNS, KC_NO, KC_NO, KC_EQL, KC_GRV, KC_PLUS, KC_NO, KC_NO, KC_0, KC_1, KC_2, KC_3, KC_NO, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_0, TG(3), KC_TRNS, KC_TRNS, KC_TRNS),
+	[3] = LAYOUT(KC_ESC, KC_1, KC_2, KC_3, KC_4, KC_5, KC_6, KC_7, KC_8, KC_9, KC_0, KC_BSPC, KC_TAB, KC_Q, KC_W, KC_E, KC_R, KC_T, KC_Y, KC_U, KC_I, KC_O, KC_P, KC_LBRC, KC_CAPS, KC_A, KC_S, KC_D, KC_F, KC_G, KC_H, KC_J, KC_K, KC_L, KC_SCLN, KC_QUOT, KC_LSFT, KC_Z, KC_X, KC_C, KC_V, KC_B, KC_MINS, KC_NO, KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_RSFT, KC_LCTL, KC_RBRC, KC_LCTL, KC_SPC, KC_ENT, KC_NUHS, TG(3), TG(3)),
+	[4] = LAYOUT(KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_SCRL, KC_NUM, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_PGUP, KC_UP, KC_PGDN, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_HOME, KC_LEFT, KC_DOWN, KC_RGHT, KC_END, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_SPC, KC_NO, KC_TRNS, KC_NO),
+	[5] = LAYOUT(KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, MO(6), KC_ACL0, KC_ACL1, KC_ACL2, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_TRNS, KC_BTN1, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO),
+	[6] = LAYOUT(KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_TRNS, KC_ACL0, KC_ACL1, KC_ACL2, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_BTN2, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO)
 };
 
 #if defined(ENCODER_ENABLE) && defined(ENCODER_MAP_ENABLE)
@@ -24,3 +32,141 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
 
 
 
+void keyboard_pre_init_user(void) {
+  // Set our LED pin as output
+  setPinOutput(24);
+  // Turn the LED off
+  // (Due to technical reasons, high is off and low is on)
+  writePinHigh(24);
+}
+/*
+This would be useful for setting a different holding term for my LT on the y key
+For now I'm trying a "hold on other key press" and maybe even the permissive. 
+This would still require changes in the config.h and doesn't work just by uncommenting this
+uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
+  switch (keycode) {
+     case LT(2, KC_Z):
+       return 130;
+     default:
+       return TAPPING_TERM;
+  }
+}
+*/
+
+
+/*bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
+  switch (keycode) {
+    case LT(2, KC_Z):
+      // Immediately select the hold action when another key is pressed.
+      return true;
+    default:
+      // Do not select the hold action when another key is pressed.
+      return false;
+  }
+}
+*/
+
+bool get_permissive_hold(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case LT(1, KC_Z):
+            // Immediately select the hold action when another key is tapped.
+            return true;
+        default:
+            // Do not select the hold action when another key is tapped.
+            return false;
+    }
+}
+
+/*uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case LT(1, KC_Z):
+            return 100;
+        default:
+            return TAPPING_TERM;
+    }
+}*/
+
+
+
+void suspend_wakeup_init_user(void) {
+  //soft_reset_keyboard();
+}
+
+
+const uint16_t PROGMEM caps_combo[] = {KC_LEFT_SHIFT, KC_RIGHT_SHIFT, COMBO_END};
+combo_t key_combos[] = {
+    COMBO(caps_combo, KC_CAPS_LOCK),
+};
+
+
+bool encoder_update_user(uint8_t index, bool clockwise) {
+    if (index == 0) { /* Right encoder */
+        switch (get_highest_layer(layer_state)) {
+            case 0: // Base layer
+                if (clockwise) {
+                    tap_code(KC_VOLU); // Volume up
+                } else {
+                    tap_code(KC_VOLD); // Volume down
+                }
+                break;
+
+            case 1: // Layer 1
+                if (clockwise) {
+                    tap_code(KC_WH_U); // Scroll up
+                } else {
+                    tap_code(KC_WH_D); // Scroll down
+                }
+                break;
+
+            case 5:
+                if (clockwise) {
+                    tap_code(KC_MS_R);
+                } else {
+                    tap_code(KC_MS_L);
+                }
+                break;
+            case 6:
+                if (clockwise) {
+                    tap_code(KC_MS_U);
+                } else {
+                    tap_code(KC_MS_D);
+                }
+                break;
+            default: // Any other layer
+                if (clockwise) {
+                    tap_code(KC_VOLU); // Page down (example action)
+                } else {
+                    tap_code(KC_VOLD); // Page up (example action)
+                }
+                break;
+        }
+    }
+    else {
+    	if (clockwise) {
+	    tap_code(KC_VOLU);
+	} else {
+	    tap_code(KC_VOLD);
+	}
+    }
+
+    return false;
+}
+
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+  switch (keycode) {
+    case OTTI_CIRC:
+      if (record->event.pressed) {
+        tap_code(KC_GRV);
+	tap_code(KC_SPC);
+      }
+      return false; // Skip all further processing of this key
+    case OTTI_BACK:
+      if (record->event.pressed) {
+        tap_code16(KC_PLUS);
+	tap_code(KC_SPC);
+      }
+      return false;
+    default:
+      return true; // Process all other keycodes normally
+  }
+}

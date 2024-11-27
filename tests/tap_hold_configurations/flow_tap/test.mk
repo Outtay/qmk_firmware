@@ -1,4 +1,4 @@
-# Copyright 2022 Vladislav Kucheriavykh
+# Copyright 2022 splitkb.com <support@splitkb.com>
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -13,6 +13,11 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+#KEY_LOCK_ENABLE = yes
 COMBO_ENABLE = yes
+ENCODER_ENABLE = yes
 
-INTROSPECTION_KEYMAP_C = test_keymap.c
+
+DEFAULT_FOLDER = splitkb/aurora/lily58/rev1
+CONVERT_TO=liatris
+
