@@ -38,9 +38,10 @@
 #define ENCODERS_PAD_B_RIGHT { F6 }
 #define ENCODER_RESOLUTIONS_RIGHT { 4 }
 
-
+/*
 // Not yet available in `info.json`
 #ifdef OLED_ENABLE
 #    define OLED_DISPLAY_128X32
 #    define SPLIT_OLED_ENABLE
 #endif
+*/
