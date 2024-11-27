@@ -228,6 +228,53 @@ void render_layer_state(void) {
     }
 }
 
+void render_my_layer_state(void) {
+    static const char PROGMEM inactive_layer[] = {
+        0x20, 0x94, 0x95, 0x96, 0x20,
+        0x20, 0xb4, 0xb5, 0xb6, 0x20, 0};
+    static const char PROGMEM active_layer[] = {
+        0x20, 0x97, 0x98, 0x99, 0x20,
+        0x20, 0xb7, 0xb8, 0xb9, 0x20, 0};
+
+    uint32_t layer = get_highest_layer(layer_state);
+    for (int i = 6; i >= 0; i--)
+    {
+    	if (((int) layer) == i)
+	{
+	    oled_write_P(active_layer, false);
+	}
+	else 
+	{
+	    oled_write_P(inactive_layer, false);
+	}
+    }
+    render_space();
+
+    switch(layer)
+    {
+    	case 0:
+	    oled_write_P(PSTR(" base"), false);
+	    break;
+    	case 1:
+	    oled_write_P(PSTR(" neo "), false);
+	    break;
+    	case 2:
+	    oled_write_P(PSTR(" move"), false);
+	    break;
+    	case 3:
+	    oled_write_P(PSTR("qwrtz"), false);
+	    break;
+    	case 4:
+	    oled_write_P(PSTR("media"), false);
+	    break;
+    	case 5:
+	    oled_write_P(PSTR("mouse"), false);
+	    break;
+    	case 6:
+	    oled_write_P(PSTR("mouse"), false);
+	    break;
+    }
+}
 
 bool oled_task_kb(void) {
     if (!oled_task_user()) {
@@ -244,8 +291,9 @@ bool oled_task_kb(void) {
         render_mod_status_ctrl_shift(get_mods()|get_oneshot_mods());
         render_kb_LED_state();
     } else {
+	render_my_layer_state();
         // clang-format off
-        static const char PROGMEM aurora_art[] = {
+        /*static const char PROGMEM aurora_art[] = {
             0x00, 0x00, 0x00, 0x10, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x08, 0x1c, 0x08, 0x00, 0x00, 
             0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00, 0x00, 0x10, 0x00, 0x00, 0x00, 
             0x00, 0x00, 0x00, 0x00, 0x20, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x00, 0x40, 
@@ -280,7 +328,9 @@ bool oled_task_kb(void) {
             0x18, 0x09, 0xff, 0x0c, 0xea, 0x1f, 0x28, 0x60, 0x30, 0xf8, 0x20, 0xc0, 0x42, 0x33, 0x21, 0x00
         };
         // clang-format on
+	
         oled_write_raw_P(aurora_art, sizeof(aurora_art));
+	*/
     }
     return false;
 }
