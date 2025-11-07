@@ -12,14 +12,14 @@ I get the json from the qmk configurator
 
 After that I add the prependumCode and the addendumCode file to the keymap.c
 
-sed -i '1r prependumCode' keymap.c && cat addendumCode >> keymap.c
+sed -i '1r prependumCode' keymap.c && cat addendumCode.c >> keymap.c
 
 in the rules.mk there's the convert rule such that I don't need to mention that otherwise to compile I have to call
 _qmk compile -kb splitkb/aurora/lily58/rev1 -km outtay_
 
 
 To do everything in one line while being in the outtay folder
-qmk json2c -o keymap.c ../splitkb_aurora_lily58_rev1_outtay.json && sed -i '1r prependumCode' keymap.c && cat addendumCode >> keymap.c && cd /qmk_firmware && qmk compile -kb splitkb/aurora/lily58/rev1 -km outtay && cd lilyConfig/keymaps/outtay
+qmk json2c -o keymap.c ../splitkb_aurora_lily58_rev1_outtay.json && sed -i '1r prependumCode' keymap.c && cat addendumCode.c >> keymap.c && cd /qmk_firmware && qmk compile -kb splitkb/aurora/lily58/rev1 -km outtay && cd lilyConfig/keymaps/outtay
 
 
 

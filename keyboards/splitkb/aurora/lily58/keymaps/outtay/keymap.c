@@ -4,6 +4,9 @@ enum my_keycodes {
   OTTI_BACK
 };
 
+#if __has_include("keymap.h")
+#    include "keymap.h"
+#endif
 
 
 /* THIS FILE WAS GENERATED!
@@ -12,25 +15,22 @@ enum my_keycodes {
  * edit it directly.
  */
 
-
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-	[0] = LAYOUT(KC_ESC, KC_1, KC_2, KC_3, KC_4, KC_5, KC_6, KC_7, KC_8, KC_9, KC_0, KC_BSPC, KC_TAB, KC_X, KC_V, KC_L, KC_C, KC_W, KC_K, KC_H, KC_G, KC_F, KC_Q, KC_MINS, MO(1), KC_U, KC_I, KC_A, KC_E, KC_O, KC_S, KC_N, KC_R, KC_T, KC_D, LT(1,KC_Z), KC_LSFT, KC_LBRC, KC_SCLN, KC_QUOT, KC_P, KC_Y, MO(5), KC_MUTE, KC_B, KC_M, KC_COMM, KC_DOT, KC_J, KC_RSFT, KC_LGUI, KC_LALT, KC_LCTL, KC_SPC, KC_ENT, KC_RCTL, TT(4), MO(2)),
-	[1] = LAYOUT(KC_TRNS, KC_BSLS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_1, KC_QUES, RALT(KC_8), RALT(KC_9), OTTI_CIRC, KC_EXLM, KC_NUBS, RSFT(KC_NUBS), RSFT(KC_0), RSFT(KC_6), KC_TRNS, KC_TRNS, RALT(KC_MINS), KC_AMPR, RALT(KC_7), RALT(KC_0), KC_PAST, KC_UNDS, KC_ASTR, KC_LPRN, KC_SLSH, KC_GT, RALT(KC_Q), KC_TRNS, KC_NUHS, KC_DLR, RALT(KC_NUBS), RALT(KC_RBRC), OTTI_BACK, KC_TRNS, KC_TRNS, KC_PPLS, RSFT(KC_5), KC_AT, KC_PIPE, KC_LT, KC_TRNS, KC_TRNS, KC_TRNS, KC_NO, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS),
-	[2] = LAYOUT(KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, KC_F6, KC_F7, KC_F8, KC_F9, KC_F10, KC_F11, KC_F12, KC_NO, KC_PGUP, KC_BSPC, KC_UP, KC_DEL, KC_PGDN, KC_NO, KC_7, KC_8, KC_9, KC_NO, KC_NO, KC_NO, KC_HOME, KC_LEFT, KC_DOWN, KC_RGHT, KC_END, KC_NO, KC_4, KC_5, KC_6, KC_NO, KC_NO, KC_TRNS, KC_NO, KC_NO, KC_EQL, KC_GRV, KC_PLUS, KC_NO, KC_NO, KC_0, KC_1, KC_2, KC_3, KC_NO, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_0, TG(3), KC_TRNS, KC_TRNS, KC_TRNS),
-	[3] = LAYOUT(KC_ESC, KC_1, KC_2, KC_3, KC_4, KC_5, KC_6, KC_7, KC_8, KC_9, KC_0, KC_BSPC, KC_TAB, KC_Q, KC_W, KC_E, KC_R, KC_T, KC_Y, KC_U, KC_I, KC_O, KC_P, KC_LBRC, KC_CAPS, KC_A, KC_S, KC_D, KC_F, KC_G, KC_H, KC_J, KC_K, KC_L, KC_SCLN, KC_QUOT, KC_LSFT, KC_Z, KC_X, KC_C, KC_V, KC_B, KC_MINS, KC_NO, KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_RSFT, KC_LCTL, KC_RBRC, KC_LCTL, KC_SPC, KC_ENT, KC_NUHS, TG(3), TG(3)),
-	[4] = LAYOUT(KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_SCRL, KC_NUM, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_PGUP, KC_UP, KC_PGDN, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_HOME, KC_LEFT, KC_DOWN, KC_RGHT, KC_END, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_SPC, KC_NO, KC_TRNS, KC_NO),
-	[5] = LAYOUT(KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, MO(6), KC_ACL0, KC_ACL1, KC_ACL2, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_TRNS, KC_BTN1, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO),
-	[6] = LAYOUT(KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_TRNS, KC_ACL0, KC_ACL1, KC_ACL2, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_BTN2, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO)
+    [0] = LAYOUT(KC_ESC, LT(7,KC_1), KC_2, KC_3, KC_4, KC_5, KC_6, KC_7, KC_8, KC_9, LT(7,KC_0), KC_BSPC, KC_TAB, KC_X, KC_V, KC_L, KC_C, KC_W, KC_K, KC_H, KC_G, KC_F, KC_Q, KC_MINS, MO(1), KC_U, KC_I, KC_A, KC_E, KC_O, KC_S, KC_N, KC_R, KC_T, KC_D, LT(1,KC_Z), KC_LSFT, KC_LBRC, KC_SCLN, KC_QUOT, KC_P, KC_Y, TT(7), KC_MUTE, KC_B, KC_M, KC_COMM, KC_DOT, KC_J, KC_RSFT, KC_LGUI, KC_LALT, KC_LCTL, KC_SPC, KC_ENT, KC_RCTL, TT(4), MO(2)),
+    [1] = LAYOUT(KC_TRNS, KC_BSLS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_1, KC_QUES, RALT(KC_8), RALT(KC_9), OTTI_CIRC, KC_EXLM, KC_NUBS, RSFT(KC_NUBS), RSFT(KC_0), RSFT(KC_6), KC_TRNS, KC_TRNS, RALT(KC_MINS), KC_AMPR, RALT(KC_7), RALT(KC_0), KC_PAST, KC_UNDS, KC_ASTR, KC_LPRN, KC_SLSH, KC_GT, RALT(KC_Q), KC_TRNS, KC_NUHS, KC_DLR, RALT(KC_NUBS), RALT(KC_RBRC), OTTI_BACK, KC_TRNS, KC_TRNS, KC_PPLS, RSFT(KC_5), KC_AT, KC_PIPE, KC_LT, KC_TRNS, KC_TRNS, KC_TRNS, KC_NO, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS),
+    [2] = LAYOUT(KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, KC_F6, KC_F7, KC_F8, KC_F9, KC_F10, KC_F11, KC_F12, KC_NO, KC_PGUP, KC_BSPC, KC_UP, KC_DEL, KC_PGDN, KC_NO, KC_7, KC_8, KC_9, KC_NO, KC_NO, KC_NO, KC_HOME, KC_LEFT, KC_DOWN, KC_RGHT, KC_END, KC_NO, KC_4, KC_5, KC_6, KC_NO, KC_NO, KC_TRNS, KC_NO, KC_NO, KC_EQL, KC_GRV, KC_PLUS, KC_NO, KC_NO, KC_0, KC_1, KC_2, KC_3, KC_NO, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_0, TG(3), KC_TRNS, KC_TRNS, KC_TRNS),
+    [3] = LAYOUT(KC_ESC, KC_1, KC_2, KC_3, KC_4, KC_5, KC_6, KC_7, KC_8, KC_9, KC_0, KC_BSPC, KC_TAB, KC_Q, KC_W, KC_E, KC_R, KC_T, KC_Y, KC_U, KC_I, KC_O, KC_P, KC_LBRC, KC_CAPS, KC_A, KC_S, KC_D, KC_F, KC_G, KC_H, KC_J, KC_K, KC_L, KC_SCLN, KC_QUOT, KC_LSFT, KC_Z, KC_X, KC_C, KC_V, KC_B, KC_MINS, KC_NO, KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_RSFT, KC_LCTL, KC_RBRC, KC_LCTL, KC_SPC, KC_ENT, KC_NUHS, TG(3), TG(3)),
+    [4] = LAYOUT(KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_SCRL, KC_NUM, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_PGUP, KC_UP, KC_PGDN, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_HOME, KC_LEFT, KC_DOWN, KC_RGHT, KC_END, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_SPC, KC_NO, KC_TRNS, KC_NO),
+    [5] = LAYOUT(KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, MO(6), MS_ACL0, MS_ACL1, MS_ACL2, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_TRNS, MS_BTN1, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO),
+    [6] = LAYOUT(KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_TRNS, MS_ACL0, MS_ACL1, MS_ACL2, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, MS_BTN2, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO),
+    [7] = LAYOUT(KC_NO, KC_TRNS, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_PSLS, KC_PAST, KC_TRNS, KC_BSPC, KC_NO, KC_NO, KC_7, KC_8, KC_9, KC_NO, KC_NO, KC_7, KC_8, KC_9, KC_PMNS, KC_NO, KC_NO, KC_NO, KC_4, KC_5, KC_6, KC_NO, KC_NO, KC_4, KC_5, KC_6, KC_PPLS, KC_NO, KC_NO, KC_NO, KC_1, KC_2, KC_3, KC_0, KC_TRNS, KC_NO, KC_0, KC_1, KC_2, KC_3, KC_PENT, KC_NO, KC_NO, KC_NO, KC_NO, KC_0, KC_0, KC_0, KC_COMM, KC_DOT)
 };
 
-#if defined(ENCODER_ENABLE) && defined(ENCODER_MAP_ENABLE)
-const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
-
-};
-#endif // defined(ENCODER_ENABLE) && defined(ENCODER_MAP_ENABLE)
 
 
-
+#ifdef OTHER_KEYMAP_C
+#    include OTHER_KEYMAP_C
+#endif // OTHER_KEYMAP_C
 
 void keyboard_pre_init_user(void) {
   // Set our LED pin as output
@@ -39,19 +39,19 @@ void keyboard_pre_init_user(void) {
   // (Due to technical reasons, high is off and low is on)
   writePinHigh(24);
 }
-/*
-This would be useful for setting a different holding term for my LT on the y key
-For now I'm trying a "hold on other key press" and maybe even the permissive. 
-This would still require changes in the config.h and doesn't work just by uncommenting this
+
+//This would be useful for setting a different holding term for my LT on the y key
+//For now I'm trying a "hold on other key press" and maybe even the permissive. 
+//This would still require changes in the config.h and doesn't work just by uncommenting this
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
-     case LT(2, KC_Z):
-       return 130;
+     case LT(1, KC_Z):
+       return TAPPING_TERM - 70;
      default:
        return TAPPING_TERM;
   }
 }
-*/
+
 
 
 /*bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
@@ -66,7 +66,7 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
 }
 */
 
-bool get_permissive_hold(uint16_t keycode, keyrecord_t *record) {
+/*bool get_permissive_hold(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case LT(1, KC_Z):
             // Immediately select the hold action when another key is tapped.
@@ -76,16 +76,7 @@ bool get_permissive_hold(uint16_t keycode, keyrecord_t *record) {
             return false;
     }
 }
-
-/*uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
-    switch (keycode) {
-        case LT(1, KC_Z):
-            return 100;
-        default:
-            return TAPPING_TERM;
-    }
-}*/
-
+*/
 
 
 void suspend_wakeup_init_user(void) {
@@ -98,9 +89,22 @@ combo_t key_combos[] = {
     COMBO(caps_combo, KC_CAPS_LOCK),
 };
 
+// This feels stupid, but is needed such that pressing y and then y again
+// does the correct thing
+// I have to be honest, that I did not really understand it and maybe it's not
+// needed after al
+uint16_t get_quick_tap_term(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case LT(1, KC_Z):
+            return 0;
+        default:
+            return QUICK_TAP_TERM;
+    }
+}
+
 
 bool encoder_update_user(uint8_t index, bool clockwise) {
-    if (index == 0) { /* Right encoder */
+    if (true) { /* Don't actually care which encoder it is */
         switch (get_highest_layer(layer_state)) {
             case 0: // Base layer
                 if (clockwise) {
