@@ -1,0 +1,5 @@
+enum my_keycodes {
+  OTTI_CIRC = SAFE_RANGE,
+  OTTI_BACK
+};
+

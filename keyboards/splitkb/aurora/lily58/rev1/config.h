@@ -18,26 +18,29 @@
 
 // `SPLIT_HAND_PIN` can currently be defined in `info.json`,
 // but can't yet be given a value
-#define SPLIT_HAND_PIN F5
+//#define SPLIT_HAND_PIN F5
 
 //#define HOLD_ON_OTHER_KEY_PRESS
 //#define HOLD_ON_OTHER_KEY_PRESS_PER_KEY
-#define PERMISSIVE_HOLD
-#define PERMISSIVE_HOLD_PER_KEY
-//#define TAPPING_TERM_PER_KEY
+//#define PERMISSIVE_HOLD
+//#define PERMISSIVE_HOLD_PER_KEY
+#define TAPPING_TERM_PER_KEY
+//#define QUICK_TAP_TERM 10
+#define QUICK_TAP_TERM_PER_KEY
+
 
 #define TAPPING_TOGGLE 2
 
 #define SPLIT_LAYER_STATE_ENABLE
 
 
-#define ENCODERS_PAD_A { }
+/*#define ENCODERS_PAD_A { }
 #define ENCODERS_PAD_B { }
 #define ENCODER_RESOLUTIONS { }
 #define ENCODERS_PAD_A_RIGHT { F7 }
 #define ENCODERS_PAD_B_RIGHT { F6 }
 #define ENCODER_RESOLUTIONS_RIGHT { 4 }
-
+*/
 /*
 // Not yet available in `info.json`
 #ifdef OLED_ENABLE

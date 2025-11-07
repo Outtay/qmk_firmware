@@ -15,7 +15,7 @@
 
 #KEY_LOCK_ENABLE = yes
 COMBO_ENABLE = yes
-ENCODER_ENABLE = yes
+#ENCODER_ENABLE = yes
 
 
 DEFAULT_FOLDER = splitkb/aurora/lily58/rev1
