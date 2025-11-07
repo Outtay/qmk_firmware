@@ -82,24 +82,24 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
 
             case 1: // Layer 1
                 if (clockwise) {
-                    tap_code(KC_WH_U); // Scroll up
+                    tap_code(MS_WHLU); // Scroll up
                 } else {
-                    tap_code(KC_WH_D); // Scroll down
+                    tap_code(MS_WHLD); // Scroll down
                 }
                 break;
 
             case 5:
                 if (clockwise) {
-                    tap_code(KC_MS_R);
+                    tap_code(MS_RGHT);
                 } else {
-                    tap_code(KC_MS_L);
+                    tap_code(MS_LEFT);
                 }
                 break;
             case 6:
                 if (clockwise) {
-                    tap_code(KC_MS_U);
+                    tap_code(MS_UP);
                 } else {
-                    tap_code(KC_MS_D);
+                    tap_code(MS_DOWN);
                 }
                 break;
             default: // Any other layer
